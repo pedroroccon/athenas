@@ -1,0 +1,12 @@
++--------+-----------+---------------------------------+--------------------------+-----------------------------------------------------+------------+
+| Domain | Method    | URI                             | Name                     | Action                                              | Middleware |
++--------+-----------+---------------------------------+--------------------------+-----------------------------------------------------+------------+
+|        | GET|HEAD  | /                               |                          | Closure                                             | web        |
+|        | GET|HEAD  | api/user                        |                          | Closure                                             | api        |
+|        |           |                                 |                          |                                                     | auth:api   |
+|        | GET|HEAD  | athenas/api/category            | athenas.category.index   | Athenas\Http\Controllers\CategoryController@index   |            |
+|        | POST      | athenas/api/category            | athenas.category.store   | Athenas\Http\Controllers\CategoryController@store   |            |
+|        | GET|HEAD  | athenas/api/category/{category} | athenas.category.show    | Athenas\Http\Controllers\CategoryController@show    |            |
+|        | PUT|PATCH | athenas/api/category/{category} | athenas.category.update  | Athenas\Http\Controllers\CategoryController@update  |            |
+|        | DELETE    | athenas/api/category/{category} | athenas.category.destroy | Athenas\Http\Controllers\CategoryController@destroy |            |
++--------+-----------+---------------------------------+--------------------------+-----------------------------------------------------+------------+

@@ -5,3 +5,7 @@
  * das rotas dedicadas a API dos recursos.
  *
  */
+
+Route::prefix(config('athenas.path'))->middleware('web')->name('athenas.')->group(function() {
+    Route::apiResource('api/category', 'Athenas\Http\Controllers\CategoryController');
+});
