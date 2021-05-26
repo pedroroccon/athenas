@@ -18,6 +18,12 @@ class CategoryTest extends TestCase
 		$this->category = Category::factory()->create();
 	}
 
+    /** @test */
+    public function possui_varias_pessoas_associadas()
+    {
+        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $this->category->peoples);
+    }
+
 	/** @test */
     public function possui_um_caminho_definido()
     {
