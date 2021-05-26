@@ -15,8 +15,10 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained();
             $table->string('code')->unique();
             $table->string('name');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
