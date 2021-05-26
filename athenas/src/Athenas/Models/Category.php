@@ -28,9 +28,9 @@ class Category extends Model
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function peoples()
+    public function people()
     {
-        return $this->hasMany(People::class);
+        return $this->hasMany(Person::class);
     }
 
     /**

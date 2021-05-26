@@ -3,31 +3,31 @@
 namespace Tests\Unit;
 
 use Athenas\Models\Category;
-use Athenas\Models\People;
+use Athenas\Models\Person;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class PeopleTest extends TestCase
+class PersonTest extends TestCase
 {
 	use RefreshDatabase;
 
-	protected $people;
+	protected $person;
 
 	public function setUp(): void
 	{
 		parent::setUp();
-		$this->people = People::factory()->create();
+		$this->person = Person::factory()->create();
 	}
 
 	/** @test */
     public function possui_um_caminho_definido()
     {
-    	$this->assertEquals(config('athenas.path') . '/people/' . $this->people->id, $this->people->path());
+    	$this->assertEquals(config('athenas.path') . '/person/' . $this->person->id, $this->person->path());
 	}
 
     /** @test */
 	public function pertence_a_uma_categoria()
 	{
-		$this->assertInstanceOf(Category::class, $this->people->category);
+		$this->assertInstanceOf(Category::class, $this->person->category);
 	}
 }

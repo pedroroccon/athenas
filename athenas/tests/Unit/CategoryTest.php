@@ -21,7 +21,7 @@ class CategoryTest extends TestCase
     /** @test */
     public function possui_varias_pessoas_associadas()
     {
-        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $this->category->peoples);
+        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $this->category->people);
     }
 
 	/** @test */

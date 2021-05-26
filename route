@@ -1,12 +1,22 @@
-+--------+-----------+---------------------------------+--------------------------+-----------------------------------------------------+------------+
-| Domain | Method    | URI                             | Name                     | Action                                              | Middleware |
-+--------+-----------+---------------------------------+--------------------------+-----------------------------------------------------+------------+
-|        | GET|HEAD  | /                               |                          | Closure                                             | web        |
-|        | GET|HEAD  | api/user                        |                          | Closure                                             | api        |
-|        |           |                                 |                          |                                                     | auth:api   |
-|        | GET|HEAD  | athenas/api/category            | athenas.category.index   | Athenas\Http\Controllers\CategoryController@index   |            |
-|        | POST      | athenas/api/category            | athenas.category.store   | Athenas\Http\Controllers\CategoryController@store   |            |
-|        | GET|HEAD  | athenas/api/category/{category} | athenas.category.show    | Athenas\Http\Controllers\CategoryController@show    |            |
-|        | PUT|PATCH | athenas/api/category/{category} | athenas.category.update  | Athenas\Http\Controllers\CategoryController@update  |            |
-|        | DELETE    | athenas/api/category/{category} | athenas.category.destroy | Athenas\Http\Controllers\CategoryController@destroy |            |
-+--------+-----------+---------------------------------+--------------------------+-----------------------------------------------------+------------+
+
+   Illuminate\Contracts\Container\BindingResolutionException 
+
+  Target class [Athenas\Http\Controllers\PeopleController] does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Container/Container.php:838
+    834▕ 
+    835▕         try {
+    836▕             $reflector = new ReflectionClass($concrete);
+    837▕         } catch (ReflectionException $e) {
+  ➜ 838▕             throw new BindingResolutionException("Target class [$concrete] does not exist.", 0, $e);
+    839▕         }
+    840▕ 
+    841▕         // If the type is not instantiable, the developer is attempting to resolve
+    842▕         // an abstract type such as an Interface or Abstract Class and there is
+
+  1   [internal]:0
+      Illuminate\Foundation\Console\RouteListCommand::Illuminate\Foundation\Console\{closure}()
+
+      [2m+13 vendor frames [22m
+  15  [internal]:0
+      Illuminate\Foundation\Console\RouteListCommand::Illuminate\Foundation\Console\{closure}()

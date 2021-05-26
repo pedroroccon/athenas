@@ -3,11 +3,11 @@
 namespace Athenas\Models\Factories;
 
 use Athenas\Models\Category;
-use Athenas\Models\People;
+use Athenas\Models\Person;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class PeopleFactory extends Factory
+class PersonFactory extends Factory
 {
 
     use RefreshDatabase;
@@ -18,7 +18,7 @@ class PeopleFactory extends Factory
      *
      * @var string
      */
-    protected $model = People::class;
+    protected $model = Person::class;
 
     /**
      * Define the model's default state.
