@@ -13,5 +13,4 @@ class AthenasProviderTest extends TestCase
     {
         $this->assertEquals(class_exists(AthenasServiceProvider::class), true);
     }
-
 }
