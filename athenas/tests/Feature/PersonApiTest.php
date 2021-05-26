@@ -60,9 +60,7 @@ class PersonApiTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $params = Person::factory()->make()->toArray([
-            'name' => 'Updated person'
-        ]);
+        $params = Person::factory()->make()->toArray();
         
         $this->put(route('athenas.person.update', ['person' => $this->person->id]), $params)
             ->assertStatus(200)
