@@ -39,6 +39,16 @@ class AthenasServiceProvider extends ServiceProvider
         // Definindo o diretório relacionado 
         // as migrações específicas do pacote.
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations/');
+
+        // Caso a aplicação esteja executando 
+        // em modo console, então registramos 
+        // o comando responsável por fazer 
+        // o seed na base de dados.
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Athenas\Console\Commands\SeedDatabase::class
+            ]);
+        }
     }
  
 
