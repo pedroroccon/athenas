@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ config('app.name') }} - CRUD de exemplo</title>
+@extends('athenas.layouts.app')
+@section('title', 'Categorias')
+@section('content')
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-
-    </head>
-    <body class="antialiased">
-        <div id="app">
-            <list-categories>
+    <div class="bg-light">
+        <div class="container-fluid border-top border-bottom py-4 mb-4">
+            <h1 class="h3 d-block m-0">Categorias</h1>
         </div>
-    </body>
-</html>
+    </div>
+
+    <div class="container-fluid">
+        <categories-list>
+    </div>
+@endsection

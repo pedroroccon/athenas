@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">{{ config('app.name') }}</a>
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#mainNavbar">
+        <button class="navbar-toggler btn btn-link" type="button" data-toggle="collapse" data-target="#mainNavbar">
             <i class="fas fa-bars fa-fw"></i>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
