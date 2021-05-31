@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome')->name('index');
+Route::view('/category', 'athenas.category.index')->name('category');
+Route::view('/person', 'athenas.person.index')->name('person');

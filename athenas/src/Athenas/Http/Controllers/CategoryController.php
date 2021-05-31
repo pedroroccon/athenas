@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::orderBy('id', 'desc');
-        return new CategoryCollection($categories->paginate());
+        return new CategoryCollection($categories->get());
     }
 
     /**

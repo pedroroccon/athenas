@@ -1,0 +1,36 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+.table {
+
+    font-size: 90%;
+
+    th, td {
+        vertical-align: middle;
+    }
+
+    .actions {
+        border-left: #eee 2px solid;
+    }
+
+    th {
+        border-top: none;
+        font-size: 80%;
+        text-transform: uppercase;
+    }
+}
+
+.table-nowrap {
+
+    td, th {
+        white-space: nowrap;
+    }
+
+}

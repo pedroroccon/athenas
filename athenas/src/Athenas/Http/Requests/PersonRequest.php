@@ -31,7 +31,18 @@ class PersonRequest extends FormRequest
                 'required', 
                 Rule::unique('categories', 'code')->ignore($this->category)
             ], 
-            'name' => 'required'
+            'name' => 'required', 
+            'email' => 'required|email', 
+            'category_id' => 'required|exists:categories,id'
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'code' => 'código', 
+            'name' => 'nome', 
+            'category_id' => 'categoria'
         ];
     }
 }

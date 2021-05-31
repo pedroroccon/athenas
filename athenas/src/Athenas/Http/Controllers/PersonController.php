@@ -18,8 +18,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $categories = Person::with('category')->orderBy('id', 'desc');
-        return new PersonCollection($categories->paginate());
+        $categories = Person::with('category')->orderBy('name', 'asc');
+        return new PersonCollection($categories->paginate(5));
     }
 
     /**
