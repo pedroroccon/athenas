@@ -24,7 +24,7 @@
             <small class="text-danger py-1 d-block" v-if="form.errors.has('category_id')" v-text="form.errors.get('category_id')"></small>
         </div>
         <hr>
-        <button @click="submit" class="btn btn-success btn-lg">Salvar</button>
+        <button @click="submit" class="btn btn-success btn-lg"><i class="far fa-save fa-fw mr-1"></i> Salvar</button>
     </div>
 </template>
 
