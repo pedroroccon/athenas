@@ -29,6 +29,11 @@ Caso você deseje continuar utilizando o SQLite, não se esqueça de criar o arq
 ```
 touch database/database.sqlite
 ```
+Em seu arquivo **.env**, não esqueça de configurar a base de dados
+```
+DB_CONNECTION=sqlite
+```
+Caso queira utilizar outra base de dados, você pode mudar as configurações do arquivo **.env**
 
 Faça a migração das bases de dados
 ```
@@ -52,6 +57,13 @@ Para gerar os seeders e popular a base de dados com algumas informações padrõ
 ```
 php artisan athenas:seed
 ```
+
+## Iniciando a aplicação
+Para iniciar a aplicação, utilize o comando
+```
+php artisan serve
+```
+Sua aplicação será iniciada em **localhost:8000**
 
 ### Testes automatizados
 Para executar os testes automatizados do pacote Athenas, execute o seguinte comando:
